@@ -1,0 +1,72 @@
+<h2 class="title">Contas Monitoradas</h2>
+<div class="container d-flex flex-column dashboard">
+  <div class="container d-flex flex-nowrap input-container align-items-center">
+    <div class="input-group ">
+      <input
+        type="text"
+        class="form-control m-0"
+        placeholder="Username"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        [(ngModel)]="monitoredUsername"
+      />
+    </div>
+    <button class=" btn btn-action" type="submit" (click)="onClick()">
+      Monitorar
+    </button>
+  </div>
+
+  <div *ngIf="isReceived" class="user-container">
+    <div class="container name-container">
+      <h5 class="username text-center">{{ User.name }}</h5>
+    </div>
+    <div class="container tweets-container">
+      <div
+        *ngFor="let tweet of tweets"
+        class="tweet d-flex flex-column justify-content-center"
+      >
+        <div class="">{{ tweet }}</div>
+        <div class="row buttons-row mx-auto">
+          <div class="col-2 icon">
+            <button class="btn chat">
+              <span class="material-symbols-outlined">
+                chat_bubble
+              </span>
+            </button>
+          </div>
+          <div class="col-2 icon ">
+            <button class="btn quick">
+              <span class="material-symbols-outlined">
+                quick_phrases
+              </span>
+            </button>
+          </div>
+          <div class="col-2 icon">
+            <button class="btn favorite">
+              <span class="material-symbols-outlined">
+                favorite
+              </span>
+            </button>
+          </div>
+          <div class="col-2 icon">
+            <button class="btn share">
+              <span class="material-symbols-outlined">
+                ios_share
+              </span>
+            </button>
+          </div>
+          <div class="col-2 icon">
+            <button class="btn stats">
+              <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined">
+                  monitoring
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="input-group input-group-lg d-flex flex-column">
+    <input
+      type="text"
+      class="form-control tweet-input"
+      placeholder="No que você está pensando?"
+      [(ngModel)]="tweet"
+    />
+  </div>
+  <div class=" d-flex flex-row-reverse">
+    <button class="btn btn-tweet" (click)="onClick()">
+      tweetar
+    </button>
+  </div>
+  <h5 class="tweet">{{ tweet }}</h5>
+</div>

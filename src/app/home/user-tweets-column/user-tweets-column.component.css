@@ -1,0 +1,48 @@
+.dashboard {
+  background-color: #c4c4c4;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.name-container {
+  padding: 30px;
+}
+
+.tweet {
+  padding: 5px 5px 0px 5px;
+  border-radius: 15px;
+}
+
+hr {
+  margin: 0px;
+}
+
+.tweet:hover {
+  background-color: #fefefe;
+  transition: 300ms;
+}
+
+.icon .chat:hover {
+  color: #1da1f2;
+  background-color: #91d2fa;
+}
+
+.icon .quick:hover {
+  color: #0daf6f;
+  background-color: #7fdbb6;
+}
+
+.icon .favorite:hover {
+  color: #e42450;
+  background-color: #f38ea9;
+}
+
+.icon .share:hover {
+  color: #1da1f2;
+  background-color: #91d2fa;
+}
+
+.icon .stats:hover {
+  color: #1da1f2;
+  background-color: #91d2fa;
+}

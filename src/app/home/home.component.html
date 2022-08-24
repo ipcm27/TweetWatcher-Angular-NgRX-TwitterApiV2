@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <h1 class="title my-4">Tweet Watcher</h1>
+
+  <div class="row">
+    <app-input-tweet class="col-3 mx-auto"></app-input-tweet>
+    <app-user-tweets-column class="col-3 mx-auto"></app-user-tweets-column>
+    <app-monitor-column class="col-3 mx-auto"></app-monitor-column>
+  </div>
+</div>
+
+<!-- Pensei em usar o mesmo componente user-tweets no lugar de monitor.
+Entretanto, a coisa começou a se complicar quando eu pensei como
+eu iria passar a info isUser, tweetsMonitored e tweetsUSer pra cada componente.
+POderia fazer uma service, ams ai iria complcar o que deve ser simples. -->
