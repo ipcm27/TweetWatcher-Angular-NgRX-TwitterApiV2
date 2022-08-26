@@ -1,0 +1,8 @@
+{
+  "/2/users": {
+    "target": "https://api.twitter.com",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

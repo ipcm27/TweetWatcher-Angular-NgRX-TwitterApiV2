@@ -9,11 +9,10 @@
         aria-label="Username"
         aria-describedby="basic-addon1"
         [(ngModel)]="monitoredUsername"
-      />
+      /><button class=" btn btn-action" type="submit" (click)="onClick()">
+        Monitorar
+      </button>
     </div>
-    <button class=" btn btn-action" type="submit" (click)="onClick()">
-      Monitorar
-    </button>
   </div>
 
   <div *ngIf="isReceived" class="user-container">

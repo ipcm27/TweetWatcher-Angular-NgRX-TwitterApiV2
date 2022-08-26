@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { data } from 'src/app/model/data';
+
 import { TweetService } from 'src/app/service/Tweet.service';
 
 @Component({
@@ -16,20 +16,15 @@ export class MonitorColumnComponent implements OnInit {
     name: '',
     id: ''
   };
-  tweets = [
-    'Estou me sentindo tão bem',
-    'Meu emprego é muito melhor que meu antigo',
-    ':)o'
-  ];
+  tweets = [];
 
   constructor(private service: TweetService) {}
 
   ngOnInit(): void {}
 
+  arrangeData(tweets: any[], userinfo: any) {}
+
   onClick() {
-    this.myGetIdResponse = this.service
-      .getUserId(this.monitoredUsername)
-      .subscribe();
-    console.log(this.myGetIdResponse);
+    this.service.getMonitoredUserInfoAndTweets(this.monitoredUsername);
   }
 }
