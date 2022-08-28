@@ -22,9 +22,6 @@ export class TweetService {
   responseGetId!: any;
 
   monitoredUser: any = { id: '', name: '', username: '' };
-
-  monitoredUSerUsername!: string;
-
   monitoredUserTweets: any = [{ id: '', text: '' }];
 
   constructor(private http: HttpClient) {}
@@ -74,25 +71,4 @@ export class TweetService {
 // O maior desafo não estpa sendo nem o NGRX mas sim a API
 // Agora estou tendo que faezr um proxy reverse pra poder consutar a API
 // O problema agora etsá sendo fazer nested calls pra pegar o tweet de 7 dias. Não estou conseguindo quebrar o objeto
-
-// this.getUserId(username).subscribe(response => {
-//   this.responseGetId = response;
-//   this.monitoredUserID = this.responseGetId.id;
-//   this.monitoredUser.name = this.responseGetId.name;
-//   this.monitoredUser.username = this.responseGetId.username;
-// });
-// this.getMultipleTweets(this.monitoredUserID).subscribe(
-//   responseTweetsArray => {
-//     this.monitoredUserTweets = responseTweetsArray;
-//     console.log(this.monitoredUserTweets);
-//   }
-// );
-
-// this.getUserId(username)
-// .pipe(
-//   map(Object => {
-//     console.log(Object);
-//   }),
-//   switchMap((id: any) => this.getMultipleTweets(id))
-// )
-// .subscribe(response => response);
+//
